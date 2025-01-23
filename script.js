@@ -1,3 +1,7 @@
+// declare player and cpu score variables
+let playerScore = 0;
+let cpuScore = 0;
+
 function getComputerChoice(){
     // Create an array with all 3 possible results
     const computerChoices = ["rock", "paper", "scissors"];
@@ -9,5 +13,22 @@ function getComputerChoice(){
     let rpsAction = computerChoices[randomChoice];
 
     // Return the chosen value
-    console.log(rpsAction);
+    return rpsAction;
+}
+
+function getHumanChoice(){
+    // Prompt the user for their option and save it to a variable
+    let humanChoice = prompt("Rock, Paper, or Scissors?");
+
+    // Re-prompt the user if they provide an invalid input
+    while (humanChoice != "rock" && humanChoice != "paper" && humanChoice != "scissors"){
+        humanChoice = prompt("Rock, Paper, or Scissors?");
+    }
+
+    // Return valid input
+    return humanChoice;
+}
+
+function playRound(playerChoice, cpuChoice){
+    
 }
